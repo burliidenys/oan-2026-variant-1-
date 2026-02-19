@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="uk">
+<head>
+ <meta charset="utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <title>ЛР1 – Мій застосунок</title>
+ <link rel="stylesheet" href="styles.css" />
+ <script src="app.js" defer></script>
+</head>
+<body>
+ <header class="header">
+    <h1>Варіант 1: Менеджер заявок на доступ до лабораторії</h1>
+    <p>Ключова сутність: AccessRequest</p>
+ </header>
+ <div class="adding substance">
+    <section class="form-card">
+    <h2 class="title">Нова заявка</h2>
+    <form action="" id="accessRequestForm" class="crud-form" novalidate>
+        <input type="hidden" id="editId">
+        <div class="form-group">
+            <label for="userName">Ім'я користувача</label>
+            <input type="text" name="userName" id="userName" placeholder="Логін студента " required>
+            <span class="error-label" id="userNameError"></span>
+        </div><br>
+
+        <div class="form-group">
+            <label for="requestDate">Дата та час</label>
+            <input type="datetime-local" id="requestDate" name="requestDate" required>
+            <span class="error-label" id="requestDateError"></span>
+        </div><br>
+
+        <div class="form-group">
+            <label for="accessType">Тип доступу</label>
+            <select name="accessType" id="accessType">
+                <option value=" Temporary">Тимчасовий</option>
+                <option value="Regular">Постійний</option>
+                <option value="Emergency">Терміновий</option>
+            </select>
+        </div><br>
+
+        <div class="form-group">
+            <label for="comments">Коментарі</label>
+            <textarea name="comments" id="comments" rows="3" placeholder="Мета візиту"></textarea>
+            <span class="error-label" id="commentsError"></span>
+        </div><br>
+
+        <div class="form-group">
+            <label for="status">Поточний статус</label>
+            <input type="text" id="status" value="Pending" class="readonly-input">
+        </div>
+        <button type="submit" class="btn-primary">Зареєструвати заявку</button>
+        <div class="resetform">
+        <button type="button" id="resetBtn" class="btn-secondary">Очистити форму</button>
+        </div>
+    </form>
+    </section>
+
+    <section class="table-card">
+        <h2 class="title">Журнал заявок</h2>
+        <div class="filters" style="margin-bottom: 15px; display: flex; gap: 10px;">
+    <input type="text" id="searchInput" placeholder="Пошук за ім'ям...">
+    <select id="filterType">
+        <option value="all">Усі типи</option>
+        <option value="Temporary">Тимчасовий</option>
+        <option value="Regular">Постійний</option>
+        <option value="Emergency">Терміновий</option>
+    </select>
+    </div>
+        <div class="table-responsive"></div>
+        <table class="data-table">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Користувач</th>
+                <th>Дата візиту</th>
+                <th>Тип</th>
+                <th>Статус</th>
+                <th>Дії</th>
+            </tr>
+            </thead>
+            <tbody id="requestTableBody"></tbody>
+    </table>
+    </div>
+    </section>
+</div>
+</body>
+</html>
