@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+  background: #d2d2d2; 
+    padding: 40px 20px;
+    margin: 0;
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+.adding.substance {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 16px;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 30px;
+    align-items: flex-start; 
+}
+.filters input, .filters select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1;
+}
+.btn-delete:hover { opacity: 0.8; }
+section {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    margin-bottom: 16px;
+}
+.form-card {
+    flex: 0 0 380px;
+}
+.table-card {
+    flex: 1;
+    overflow-x: auto;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box;
+}
+.form-group input:focus, 
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #4a90e2;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+}
+.error-label {
+    color: #e74c3c;
+    font-size: 12px;
+    display: block;
+    margin-top: 4px;
+    min-height: 15px;
+}
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #357abd;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #666;           
+    border: 1px solid #ccc; 
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #f8f9fa; 
+    border-color: #999;
+    color: #333;
+}
+.resetform {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background-color: #ffffff; /* Дуже світлий синій */
+    color: #4a90e2;            /* Яскраво-синій текст */
+    font-weight: 700;
+    border-bottom: 2px solid #ffffff;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+}
+
+tr:hover {
+    background-color: #fcfcfc;
+}
+
+@media (max-width: 1000px) {
+    .adding.substance {
+        flex-direction: column;
+    }
+    .form-card, .table-card {
+        width: 100%;
+        flex: none;
+    }
+}
+
+.input-error {
+    border-color: #e74c3c !important;
+    background-color: #fff6f6 !important;
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2) !important;
+}
+.error-label {
+    min-height: 18px;
+    font-weight: 500;
+}
+.btn-edit {
+    background-color: #f1c40f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.btn-delete {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-edit:hover, .btn-delete:hover {
+    opacity: 0.8;
+}
+
+.badge {
+    background: #f1f1f1;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
