@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "Node16",
+    "moduleResolution": "node16",
+    "lib": ["ESNext", "DOM"],
+    "types": ["node"],
+    "outDir": "./dist",
+    /* rootDir має вказувати на спільний корінь v_4, щоб бачити папку shared */
+    "rootDir": "..", 
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "../shared/**/*.ts" 
+  ],
+  "exclude": ["node_modules", "dist"]
+}
