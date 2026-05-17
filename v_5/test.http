@@ -1,0 +1,13 @@
+### Перевірка GET
+GET http://localhost:3000/api/v4/requests
+
+### Перевірка POST
+POST http://localhost:3000/api/v4/requests
+Content-Type: application/json
+
+{
+    "userName": "Тест VS Code",
+    "details": "Запит через REST Client",
+    "accessTypeId": 1,
+    "requestDate": "2026-05-15"
+}
