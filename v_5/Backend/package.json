@@ -1,0 +1,25 @@
+{
+  "name": "oap_2026",
+  "version": "2.0.0",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "ts-node-dev --respawn --transpile-only server.ts"
+  },
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.0",
+    "@types/node": "^20.19.39",
+    "@types/sqlite3": "^3.1.11",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^4.19.2",
+    "helmet": "^8.1.0",
+    "sqlite3": "^6.0.1"
+  }
+}
